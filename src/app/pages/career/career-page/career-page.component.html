@@ -1,0 +1,77 @@
+<header
+  class="header text-white"
+  style="background-image: url(../assets/img/bg/4.jpg)"
+  data-overlay-light="2"
+>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <h1 style="color: #484848">How it works</h1>
+        <p style="color: #484848" class="lead-2 opacity-90 mt-6">
+          Getting started and using our product is easy peasy!
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="section-open-positions">
+  <div class="container">
+    <header class="section-header">
+      <small>Jobs</small>
+      <h2>Open Positions</h2>
+      <hr />
+      <p class="lead">
+        Following list displays our current required positions. This list will
+        update regularly.
+      </p>
+    </header>
+
+    <div
+      *ngFor="let job of jobs; let iJob = index"
+      class="accordion accordion-connected shadow-5"
+    >
+      <div class="card">
+        <h6 class="card-title">
+          <a
+            class="d-flex align-items-center"
+            [class.collapsed]="!showState[iJob]"
+            data-toggle="collapse"
+            (click)="showState[iJob] = !showState[iJob]"
+            aria-expanded="false"
+            style="cursor: pointer;"
+          >
+            <strong class="mr-auto">Senior Analyst, Data Analytics</strong>
+            <span class="small text-lighter"
+              >San Francisco <i class="fa fa-map-marker ml-2"></i
+            ></span>
+          </a>
+        </h6>
+
+        <div
+          [@balloonEffect]="showState[iJob] ? 'open' : 'closed'"
+          class="card-body p-0"
+        >
+          <p class="p-4">
+            Use your extensive knowledge of JavaScript, HTML, and CSS to improve
+            our web client, a complex in-browser application relied upon by
+            millions of users every day. You will work with real-time data
+            streams, engineer for performance across browsers, and delight
+            people by making the best software we can imagine. You will
+            collaborate closely with Product, Design, Application Engineering,
+            and QA to spec, build, test and deploy new features. This position
+            reports directly to the Director of Front-end Engineering.
+          </p>
+
+          <hr class="w-100px" />
+
+          <p class="text-center">
+            <a class="btn btn-lg btn-primary" href="career-single.html"
+              >Apply Now</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
