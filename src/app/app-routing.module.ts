@@ -16,11 +16,23 @@ const routes: Routes = [
     path: "career",
     loadChildren: () =>
       import("./pages/career/career.module").then(m => m.CareerModule)
+  },
+  {
+    path: "process",
+    loadChildren: () =>
+      import("./pages/process/process.module").then(m => m.ProcessModule)
+  },
+  {
+    path: "contact",
+    loadChildren: () =>
+      import("./pages/contact/contact.module").then(m => m.ContactModule)
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, { scrollPositionRestoration: "enabled" })
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}

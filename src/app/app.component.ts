@@ -1,4 +1,12 @@
-import { Component, OnInit, HostListener, AfterViewInit } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  HostListener,
+  AfterViewInit,
+  PLATFORM_ID,
+  Inject
+} from "@angular/core";
+import { isPlatformBrowser } from "@angular/common";
 import AOS from "aos";
 
 @Component({
@@ -18,10 +26,14 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
   }
 
+  constructor(@Inject(PLATFORM_ID) private platform: any) {}
+
   ngOnInit() {}
 
   ngAfterViewInit() {
-    AOS.init();
+    if (isPlatformBrowser(this.platform)) {
+      AOS.init();
+    }
   }
 
   handleMobile() {

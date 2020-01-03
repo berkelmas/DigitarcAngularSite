@@ -1,5 +1,10 @@
-
 // Write your custom style. Feel free to split your code to several files
 body {
   //color: blue;
+}
+
+.wrapped-section {
+  margin: 30px 20px 100px;
+  border: 1px solid #f5f6f7;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
