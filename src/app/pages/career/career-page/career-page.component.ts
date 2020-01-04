@@ -35,7 +35,7 @@ import {
 })
 export class CareerPageComponent implements OnInit {
   showState: boolean[] = [false, false, false, false];
-  jobs: number[] = [1, 2, 3, 4];
+  jobs: number[] = [1];
   constructor() {}
 
   ngOnInit() {}
