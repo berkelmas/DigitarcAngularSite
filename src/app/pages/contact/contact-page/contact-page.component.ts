@@ -23,7 +23,7 @@ export class ContactPageComponent implements OnInit {
   handleSubmit() {
     console.log(this.contactForm.value);
     let params = new HttpParams();
-    params = params.append("to", "berkelmas96@gmail.com");
+    params = params.append("to", "contact@digitarc.net");
     params = params.append("subject", this.contactForm.value.email);
     params = params.append("message", this.contactForm.value.message);
 

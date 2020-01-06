@@ -36,6 +36,11 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
   }
 
+  openNewTab(url) {
+    this.mobileState = false;
+    window.open(url);
+  }
+
   handleMobile() {
     this.mobileState = !this.mobileState;
   }

@@ -17,8 +17,7 @@ import {
         "open",
         style({
           transform: "scaleY(1)",
-          opacity: 1,
-          height: "300px"
+          opacity: 1
         })
       ),
       state(
